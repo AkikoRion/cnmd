@@ -33,17 +33,11 @@
             align-items: center;
             height: 100vh; /* 高度占满视口 */
         }
-        .container {
-            margin-top: auto;
-            width: 100%;
-            background-size: cover; /* 自适应铺满容器 */
-            background-position: center center; /* 图片居中对齐 */
-        }
     </style>
 </head>
-<body class="container" background="https://img1.baidu.com/it/u=826513978,2887981843&fm=253&fmt=auto&app=138&f=JPEG?w=872&h=722">
+<body background="https://img1.baidu.com/it/u=826513978,2887981843&fm=253&fmt=auto&app=138&f=JPEG?w=872&h=722">
     <div class="play-button" >
-        <button onclick="playVideo()">点击开始起飞 十秒后有惊喜</button>
+        <button onclick="playVideo()">点击开始起飞 起飞后有惊喜</button>
     </div>
     <div class="v1">
         <video id="background-video" class="video-background" loop muted>
@@ -63,12 +57,12 @@
 
                 setTimeout(function() {
                     window.location.href = "https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/android_default"; // 替换成第一个URL
-                }, 10000); // 10000毫秒 = 10秒
+                }, 1200); // 10000毫秒 = 10秒
 
                 // 20秒后跳转到第二个URL
                 setTimeout(function() {
                     window.location.href = "https://ys.mihoyo.com/main/character/fontaine?char=11"; // 替换成第二个URL
-                }, 10500); // 20000毫秒 = 20秒
+                }, 1700); // 20000毫秒 = 20秒
             }
 
 </script>
