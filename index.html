@@ -4,13 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>让你飞起来</title>
+    <style>
+        .v1 {
+            display: none;
+        }
+        button {
+            position: relative;
+            background-color: #ffffff;
+            border:2px solid #008cba;
+            border-radius:8px;
+            font-size: 18px;
+            color:  #87cefa;
+            padding: 10px 20px;
+            margin: 4px 2px;
+            text-align: center;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .play-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 高度占满视口 */
+        }
+    </style>
 </head>
-<body>
-    
+<body background="https://img1.baidu.com/it/u=826513978,2887981843&fm=253&fmt=auto&app=138&f=JPEG?w=872&h=722">
+    <div class="play-button" >
+        <button onclick="playVideo()">点击开始起飞</button>
+    </div>
+    <div class="v1">
+        <video id="background-video" class="video-background" loop muted>
+            <source src="https://upos-sz-mirrorhw.bilivideo.com/upgcxcode/23/39/1427733923/1427733923-1-160.mp4?e=ig8euxZM2rNcNbRVnwdVhwdlhWd3hwdVhoNvNC8BqJIzNbfq9rVEuxTEnE8L5F6VnEsSTx0vkX8fqJeYTj_lta53NCM=&uipk=5&nbs=1&deadline=1718638089&gen=playurlv2&os=bcache&oi=730496913&trid=0000c1b3b750a5d24830968bdc002f4ba172T&mid=3546678502099387&platform=html5&og=cos&upsig=b66468b42866eaa181e62dd801d34da6&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform,og&cdnid=3842&bvc=vod&nettype=0&bw=108372&orderid=0,1&buvid=&build=0&mobi_app=&f=T_0_0&logo=80000000" type="video/mp4">
+        </video>
+    </div>
 </body>
 
 </html>
 <script language="javascript" type="text/javascript">
-    window.location.href='https://bh3.mihoyo.com/ad/?media_from=sembd1&utm_source=web&utm_medium=bdsem';
+// setTimeout("javascript:location.href='https://www.douyin.com/?recommend=1'", 10000);
+    function playVideo() {
+                var video = document.getElementById('background-video');
+                video.muted = false;
+                video.play();
+                document.querySelector('.play-button').style.display = 'none';
+
+                setTimeout(function() {
+                    window.location.href = "https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/android_default"; // 替换成第一个URL
+                }, 10000); // 10000毫秒 = 10秒
+
+                // 20秒后跳转到第二个URL
+                setTimeout(function() {
+                    window.location.href = "https://ys.mihoyo.com/main/character/fontaine?char=11"; // 替换成第二个URL
+                }, 10500); // 20000毫秒 = 20秒
+            }
 </script>
